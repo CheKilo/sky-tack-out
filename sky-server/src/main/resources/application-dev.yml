@@ -9,6 +9,6 @@ sky:
 
   alioss:
     endpoint: oss-cn-beijing.aliyuncs.com
-    access-key-id: LTAI5tCxQk228M7Qo4CPLK3h
-    access-key-secret: Crv32YBttAGCGWUPO4evAcL3ZlE3ac
+    access-key-id: ${ACCESS_KEY_ID}
+    access-key-secret: ${ACCESS_KEY_SECRET}
     bucket-name: sky-take-out-kilo
