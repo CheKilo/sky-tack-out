@@ -38,9 +38,8 @@ public interface EmployeeMapper {
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
 
     /**
-     * 启用禁用员工账号
-     * @param status
-     * @param id
+     * 动态更新
+     * @param employee
      */
     @AutoFill(value = OperationType.UPDATE)
     void update(Employee employee);
