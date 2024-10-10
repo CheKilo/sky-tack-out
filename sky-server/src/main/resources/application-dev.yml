@@ -12,3 +12,13 @@ sky:
     access-key-id: ${OSS_ACCESS_KEY_ID}
     access-key-secret: ${OSS_ACCESS_KEY_SECRET}
     bucket-name: sky-take-out-kilo
+
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 10
+
+  wechat:
+    appid: wxe32fa94db4fafbac
+    secret: 89890fb4271deaebfae7fae267a7267b
