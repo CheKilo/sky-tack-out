@@ -33,6 +33,21 @@ public class OrderTask {
                 orderMapper.update(orders);
             }
         }
+
+        //对于待接单的订单，如果超过40分钟未被接单，自动取消.
+        List<Orders> ordersList2 = orderMapper.getByStatusAndOrderTimeLT(Orders.TO_BE_CONFIRMED, LocalDateTime.now().plusMinutes(-40));
+        if (ordersList2 != null && ordersList2.size() > 0) {
+            for (Orders orders : ordersList2) {
+                //退款操作
+                //......
+
+                //取消订单
+                orders.setStatus(Orders.CANCELLED);
+                orders.setCancelReason("订单超时,自动取消.");
+                orders.setCancelTime(LocalDateTime.now());
+                orderMapper.update(orders);
+            }
+        }
     }
 
     /**
